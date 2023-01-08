@@ -24,7 +24,7 @@ html {
   --color-medium-gray: #e8e8e8;
   --color-white: #f9f9f9;
 
-  --transition: all 0.4s ease;
+  --transition: all 0.3s ease;
 
   --shadow-soft: 0 0 1px rgba(0, 0, 0, 0.2);
   --shadow-modal: 0 0 2px rgba(0, 0, 0, 0.5);
@@ -36,6 +36,7 @@ html {
 
 body {
   font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
 }
 
 h1,
@@ -44,4 +45,74 @@ h3,
 h4,
 h5 {
   font-family: var(--font-heading);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+  font-size: 42px;
+  line-height: 52px;
+}
+h2 {
+  font-size: 36px;
+  line-height: 44px;
+}
+h3 {
+  font-size: 32px;
+  line-height: 40px;
+}
+h4 {
+  font-size: 28px;
+  line-height: 32px;
+}
+h5 {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+@media screen and (max-width: var(--width-md)) {
+  h1 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+  h2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  h3 {
+    font-size: 28px;
+    line-height: 32px;
+  }
+  h4 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  h5 {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
