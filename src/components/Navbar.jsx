@@ -5,8 +5,8 @@ import logo from "../assets/images/logo.png";
 import { BsSearch } from "react-icons/bs";
 import { GrClose, GrMenu } from "react-icons/gr";
 
-const Menu = () => (
-  <ul className="menu">
+const Menu = ({toggleMenu=()=>{}}) => (
+  <ul className="menu" onClick={()=>toggleMenu()}>
     <li className="menu-item">
       <NavLink to="/">Home</NavLink>
     </li>
@@ -55,7 +55,7 @@ const Navbar = () => {
             isMenuOpen ? "mobile-menu show-mobile-menu" : "mobile-menu"
           }
         >
-          <Menu />
+          <Menu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu}/>
           <GrClose className="close-menu" onClick={() => toggleMenu()} />
         </div>
       </nav>
@@ -66,6 +66,9 @@ const Navbar = () => {
 export default Navbar;
 
 const Wrapper = styled.div`
+width:100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
   .nav {
     padding: 0 4rem;
     display: flex;
@@ -177,9 +180,12 @@ const Wrapper = styled.div`
     justify-content: center;
     align-items: center;
     display: none;
-    backdrop-filter: blur(5px);
+    background: rgb(0 0 0 /0.2);
+    backdrop-filter: blur(10px);
+    z-index: 5;
+    color: var(--color-white);
   }
-
+  
   .mobile-menu .menu {
     display: flex;
     flex-direction: column;
@@ -189,12 +195,13 @@ const Wrapper = styled.div`
     font-size: 2rem;
     font-weight: 400;
   }
-
+  
   .close-menu {
     position: absolute;
     top: 5%;
     right: 5%;
     font-size: 1.5rem;
+    cursor: pointer;
   }
 
   .right {

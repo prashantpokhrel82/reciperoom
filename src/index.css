@@ -32,6 +32,8 @@ html {
   --width-lg: 900px;
   --width-md: 600px;
   --width-sm: 375px;
+
+  --max-width: 1400px;
 }
 
 body {
