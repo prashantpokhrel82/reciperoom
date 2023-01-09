@@ -12,7 +12,7 @@ export const tastyApi = createApi({
   endpoints: (builder) => ({
     getAllTags: builder.query({ query: () => "/tags/list" }),
     getRecipesByTagName: builder.query({
-      query: (tagName, size) =>
+      query: ({ tagName, size }) =>
         `/recipes/list?from=0&size=${size}&tags=${tagName}`,
     }),
   }),

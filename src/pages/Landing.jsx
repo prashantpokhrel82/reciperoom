@@ -17,19 +17,19 @@ import { useGetAllTagsQuery } from "../redux/services/tastyApi";
 
 const Landing = () => {
   const { data, isFetching, isError } = useGetAllTagsQuery();
-  const { tags } = useSelector((store) => store.recipe);
+  const { tagNames } = useSelector((store) => store.recipe);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(setTagNames(data));
-  }, [tags, data]);
+  }, [data]);
 
   if (isFetching) return <Loading />;
   if (isError) return <Error />;
 
   return (
     <Wrapper>
-      <Header />
+      <Header tagName={tagNames[0]} />
       <Display />
       <PopularCategories />
       <CTA />

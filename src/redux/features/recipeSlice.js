@@ -19,7 +19,6 @@ const recipeSlice = createSlice({
         while (tempTagNames.length < 5) {
           const randomIndex = Math.floor(Math.random() * totalTagNames);
           let randomTag = tagsList[randomIndex]?.name;
-          console.log(randomTag);
           if (!tempTagNames.includes(randomTag)) {
             tempTagNames.push(tagsList[randomIndex]);
           }
