@@ -28,6 +28,7 @@
   color: var(--color-black);
   transition: var(--transition);
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .btn:hover {

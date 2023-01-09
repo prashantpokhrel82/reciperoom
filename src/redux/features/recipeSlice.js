@@ -1,6 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {};
+const initialState = {
+  recipes: [],
+};
 
 const recipeSlice = createSlice({
   name: "recipe",
@@ -8,4 +10,4 @@ const recipeSlice = createSlice({
   reducers: {},
 });
 
-export default recipeSlice;
+export default recipeSlice.reducer;
