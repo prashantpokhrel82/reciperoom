@@ -9,6 +9,10 @@ import Rating from "./Rating";
 import SimilarRecipe from "./SimilarRecipe";
 import Loading from "./Loading";
 import Error from "./Error";
+import LatestRecipes from "./LatestRecipes";
+import Recipe from "./Recipe";
+import Footer from "./Footer";
+import Slide from "./Slide";
 
 export {
   Collection,
@@ -22,4 +26,8 @@ export {
   SimilarRecipe,
   Loading,
   Error,
+  LatestRecipes,
+  Footer,
+  Recipe,
+  Slide
 };

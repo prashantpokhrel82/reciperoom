@@ -42,18 +42,18 @@
   text-transform: uppercase;
 }
 
-@media screen and (max-width: var(--width-lg)) {
+@media screen and (max-width: 900px) {
   .section__padding {
     padding: 4rem;
   }
 }
-@media screen and (max-width: var(--width-md)) {
+@media screen and (max-width: 600px) {
   .section__padding {
     padding: 4rem 2rem;
   }
 }
-@media screen and (max-width: var(--width-sm)) {
+@media screen and (max-width: 375px) {
   .section__padding {
-    padding: 2rem;
+    padding: 2rem 1rem;
   }
 }
