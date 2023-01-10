@@ -1,5 +1,4 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-
 export const tastyApi = createApi({
   reducerPath: "tastyApi",
   baseQuery: fetchBaseQuery({
@@ -15,7 +14,8 @@ export const tastyApi = createApi({
       query: ({ tagName, size }) =>
         `/recipes/list?from=0&size=${size}&tags=${tagName}`,
     }),
+    getMoreRecipeInfo: builder.query({query: (recipeId)=>`/recipes/get-more-info?id=${recipeId}`})
   }),
 });
 
-export const { useGetAllTagsQuery, useGetRecipesByTagNameQuery } = tastyApi;
+export const { useGetAllTagsQuery, useGetRecipesByTagNameQuery, useGetMoreRecipeInfoQuery } = tastyApi;
