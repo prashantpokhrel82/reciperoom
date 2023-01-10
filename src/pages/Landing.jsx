@@ -37,13 +37,12 @@ const Landing = () => {
         <Display tagName={tagNames[2]} />
         <PopularCategories />
       </div>
-
       <CTA />
       <div className="spaced">
         <CollectionContainer />
         <LatestRecipes />
-        <Footer />
       </div>
+      <Footer />
     </Wrapper>
   );
 };

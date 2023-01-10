@@ -1,54 +1,49 @@
-import styled from 'styled-components';
-import React from 'react'
-import Rating from './Rating';
+import styled from "styled-components";
+import React from "react";
+import Rating from "./Rating";
 
-const Recipe = ({name, rating, image, alt}) => {
+const Recipe = ({ name, rating, image, alt }) => {
   // console.log(name, rating, image, alt)
   return (
     <Wrapper>
-      <div className='recipe'>
+      <div className="recipe">
         <div className="recipe-image">
           <img src={image} alt={alt} />
         </div>
-        <Rating rating={rating}/>
+        {rating && <Rating rating={rating} />}
         <p>{name}</p>
       </div>
     </Wrapper>
-  )
-}
+  );
+};
 
 export default Recipe;
 
 const Wrapper = styled.div`
-  .recipe{
+  .recipe {
     height: 300px;
-    width: 340px;    
+    width: 340px;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content:space-between;
+    justify-content: space-between;
   }
 
-  .recipe-image{
+  .recipe-image {
     height: 80%;
     width: 100%;
 
-    img{
+    img {
       height: 100%;
-      width:100%;
-      object-fit:cover;
-    border-radius: 5px 5px 0 0;
-
+      width: 100%;
+      object-fit: cover;
+      border-radius: 5px 5px 0 0;
     }
   }
 
-  p{
+  p {
     font-weight: 700;
     text-transform: capitalize;
   }
-
-  
-
-
-`
+`;
