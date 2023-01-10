@@ -159,8 +159,8 @@ const Wrapper = styled.footer`
 
   .social-links {
     display: flex;
-    gap: 2rem;
-    font-size: 1.2rem;
+    gap: 2.5rem;
+    font-size: 1.5rem;
   }
 
   .links > a,
@@ -181,7 +181,7 @@ const Wrapper = styled.footer`
 
   @media screen and (max-width: 600px) {
     .bottom {
-      flex-direction: column;
+      flex-direction: column-reverse;
       row-gap: 3rem;
     }
 
