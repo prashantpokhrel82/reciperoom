@@ -27,10 +27,13 @@ const Landing = () => {
   if (isFetching) return <Loading />;
   if (isError) return <Error />;
 
+  console.log(tagNames);
+
   return (
     <Wrapper>
       <Header tagName={tagNames[0]} />
-      <Display />
+      <Display tagName={tagNames[1]}/>
+      <Display tagName={tagNames[2]}/>
       <PopularCategories />
       <CTA />
       <CollectionContainer />
