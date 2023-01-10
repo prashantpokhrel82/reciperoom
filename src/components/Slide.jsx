@@ -33,7 +33,6 @@ const Wrapper = styled.div`
     align-items: center;
     background: var(--color-light-blue);
     border-radius: 10px 0 0 10px;
-    box-shadow: 5px 5px 10px rgb(0, 0, 0);
   }
 
   .left-pane {

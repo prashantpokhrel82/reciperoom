@@ -31,13 +31,17 @@ const Landing = () => {
 
   return (
     <Wrapper>
-      <Header tagName={tagNames[0]} />
-      <Display tagName={tagNames[1]}/>
-      <Display tagName={tagNames[2]}/>
-      <PopularCategories />
+      <div className="spaced">
+        <Header tagName={tagNames[0]} />
+        <Display tagName={tagNames[1]} />
+        <Display tagName={tagNames[2]} />
+        <PopularCategories />
+      </div>
       <CTA />
-      <CollectionContainer />
-      <LatestRecipes />
+      <div className="spaced">
+        <CollectionContainer />
+        <LatestRecipes />
+      </div>
       <Footer />
     </Wrapper>
   );
@@ -46,7 +50,9 @@ const Landing = () => {
 export default Landing;
 
 const Wrapper = styled.div`
-  width: 100%;
-  max-width: var(--max-width);
-  margin: 0 auto;
+  .spaced {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
 `;
