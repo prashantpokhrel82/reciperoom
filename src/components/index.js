@@ -13,6 +13,7 @@ import LatestRecipes from "./LatestRecipes";
 import Recipe from "./Recipe";
 import Footer from "./Footer";
 import Slide from "./Slide";
+import CategoryCard from "./CategoryCard";
 
 export {
   Collection,
@@ -29,5 +30,6 @@ export {
   LatestRecipes,
   Footer,
   Recipe,
-  Slide
+  Slide,
+  CategoryCard,
 };
