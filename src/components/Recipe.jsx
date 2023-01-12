@@ -46,4 +46,11 @@ const Wrapper = styled.div`
     font-weight: 700;
     text-transform: capitalize;
   }
+
+  @media screen and (max-width: 450px) {
+    .recipe {
+      height: 300px;
+      width: 100%;
+    }
+  }
 `;

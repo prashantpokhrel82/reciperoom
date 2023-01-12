@@ -42,8 +42,10 @@ const Wrapper = styled.div`
   .collection-content {
     padding: 2rem;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    gap: 2rem;
   }
 
   h4 {
@@ -56,6 +58,15 @@ const Wrapper = styled.div`
     border-radius: 5px;
     font-weight: 600;
   }
+  @media screen and (max-width: 1280px) {
+    .collection {
+      width: 450px;
+    }
+
+    .collection-image {
+      height: 320px;
+    }
+  }
 
   @media screen and (max-width: 600px) {
     .collection {
@@ -65,15 +76,9 @@ const Wrapper = styled.div`
     .collection-content {
       padding: 1rem;
     }
-  }
 
-  @media screen and (max-width: 1280px) {
-    .collection {
-      width: 450px;
-    }
-
-    .collection-image {
-      height: 320px;
+    h4 {
+      width: 100%;
     }
   }
 `;

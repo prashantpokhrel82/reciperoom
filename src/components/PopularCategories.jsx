@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import cheesecake from "../assets/images/cheesecake.jpg";
+import CategoryCard from "./CategoryCard";
+import { popularCategories } from "../assets/data/popularCategories";
 
 const PopularCategories = () => {
   return (
@@ -8,42 +9,9 @@ const PopularCategories = () => {
       <div className="section__padding">
         <h2>Popular Categories</h2>
         <div className="categories">
-          <div className="category">
-            <div className="category-image">
-              <img src={cheesecake} alt="image" />
-            </div>
-            <p>Title</p>
-          </div>
-          <div className="category">
-            <div className="category-image">
-              <img src={cheesecake} alt="image" />
-            </div>
-            <p>Title</p>
-          </div>
-          <div className="category">
-            <div className="category-image">
-              <img src={cheesecake} alt="image" />
-            </div>
-            <p>Title</p>
-          </div>
-          <div className="category">
-            <div className="category-image">
-              <img src={cheesecake} alt="image" />
-            </div>
-            <p>Title</p>
-          </div>
-          <div className="category">
-            <div className="category-image">
-              <img src={cheesecake} alt="image" />
-            </div>
-            <p>Title</p>
-          </div>
-          <div className="category">
-            <div className="category-image">
-              <img src={cheesecake} alt="image" />
-            </div>
-            <p>Title</p>
-          </div>
+          {popularCategories.map((category) => (
+            <CategoryCard key={category.id} {...category} />
+          ))}
         </div>
       </div>
     </Wrapper>
@@ -60,39 +28,5 @@ const Wrapper = styled.div`
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
-  }
-
-  .category {
-    margin: 1rem 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .category-image {
-    height: 170px;
-    width: 170px;
-    border-radius: 50%;
-
-    img {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-  }
-
-  p {
-    font-weight: 700;
-    font-size: 1rem;
-  }
-
-  @media screen and (max-width: 638px) {
-    .category-image {
-      height: 150px;
-      width: 150px;
-    }
   }
 `;
